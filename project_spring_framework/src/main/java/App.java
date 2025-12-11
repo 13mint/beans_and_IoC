@@ -9,15 +9,13 @@ public class App {
                 (HelloWorld) applicationContext.getBean(HelloWorld.class);
         HelloWorld bean1 =
                 (HelloWorld) applicationContext.getBean(HelloWorld.class);
-        System.out.println(bean.getMessage());
-        System.out.println(bean1.getMessage());
 
-
+        Cat cat =
+                (Cat) applicationContext.getBean(Cat.class);
         Cat cat1 =
                 (Cat) applicationContext.getBean(Cat.class);
-        Cat cat2 =
-                (Cat) applicationContext.getBean(Cat.class);
-        System.out.println("first cat = " + cat1);
-        System.out.println("second cat = " + cat2);
+
+        System.out.println("HelloWorld beans are the same? " + (bean == bean1));
+        System.out.println("Cats beans are the same? " + (cat == cat1));
     }
 }
